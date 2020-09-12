@@ -92,7 +92,7 @@ double igraph_community_MaxPerm(igraph_t * g, igraph_vector_t * membership, int 
 	Sum = Old_Sum + 1;
 	printf("%lf\n", Old_Sum);
 	Itern=0;
-	while(Sum>Old_Sum && Itern<maxIt)
+	while(Sum > Old_Sum && Itern<maxIt)
 	{
 		Itern++;
 		Old_Sum=Sum;
@@ -156,7 +156,8 @@ double igraph_community_MaxPerm(igraph_t * g, igraph_vector_t * membership, int 
 
 			Sum+=cur_p;
 		}	
-		printf("SumQ %lf :: iter %d\n", Sum, Itern);
+		printf("Old_SumQ %.10lf  \n",Old_Sum);
+		printf("SumQ %.10lf :: iter %d\n", Sum, Itern);
 	}
 	Netw_perm=Sum/vertices;
 	
