@@ -1,0 +1,6 @@
+bliss/libigraph_la-uintseqhash.lo: bliss/uintseqhash.cc \
+ /usr/include/stdc-predef.h bliss/uintseqhash.hh
+
+/usr/include/stdc-predef.h:
+
+bliss/uintseqhash.hh:

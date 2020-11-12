@@ -1,0 +1,4 @@
+CHOLMOD/Partition/libigraph_la-cholmod_csymamd.lo: \
+ CHOLMOD/Partition/cholmod_csymamd.c /usr/include/stdc-predef.h
+
+/usr/include/stdc-predef.h:

@@ -1,0 +1,4 @@
+CHOLMOD/Partition/libigraph_la-cholmod_metis.lo: \
+ CHOLMOD/Partition/cholmod_metis.c /usr/include/stdc-predef.h
+
+/usr/include/stdc-predef.h:

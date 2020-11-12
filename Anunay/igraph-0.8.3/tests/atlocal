@@ -1,0 +1,14 @@
+# tests/atlocal.  Generated from atlocal.in by configure.
+# Configurable variable values for igraph test suite. Taken from bison source.
+# Copyright 2000, 2001, 2002 Free Software Foundation, Inc.
+
+# We need a C compiler.
+CC='gcc'
+CFLAGS=' -I/usr/include/libxml2 -O3  -Wall '
+
+# We need `config.h'.
+CPPFLAGS="-I$abs_top_builddir  -O3 -DIGRAPH_VERIFY_FINALLY_STACK=0"
+
+# SED command to convert a trailing CRLF to LF (incl. leading pipe sign).
+# The variable should be empty if conversion is not needed.
+SED_PIPE_CRLF2LF=

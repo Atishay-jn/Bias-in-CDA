@@ -1,0 +1,8 @@
+plfit/platform.lo: plfit/platform.c /usr/include/stdc-predef.h \
+ plfit/platform.h /usr/lib/gcc/x86_64-linux-gnu/7/include/float.h
+
+/usr/include/stdc-predef.h:
+
+plfit/platform.h:
+
+/usr/lib/gcc/x86_64-linux-gnu/7/include/float.h:

@@ -1,0 +1,6 @@
+libigraph_la-walktrap_heap.lo: walktrap_heap.cpp \
+ /usr/include/stdc-predef.h walktrap_heap.h
+
+/usr/include/stdc-predef.h:
+
+walktrap_heap.h:
