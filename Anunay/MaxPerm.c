@@ -59,6 +59,28 @@ double Perm(igraph_t * g, igraph_vector_t *neig_v, int * vertex_community, int v
 	return ((1.0*I_v)/(Emax_v*D_v))-1+cin_v;	
 }
 
+double get_perm_val(igraph_t * g, int * vertex_community){
+	igraph_vector_t *neig;
+	int vertices = igraph_vcount(g);
+
+	neig = (igraph_vector_t *) malloc(vertices * sizeof(igraph_vector_t));
+
+	for (int i = 0; i < vertices; ++i)
+	{
+
+		igraph_vector_init(&neig[i], 1);
+		igraph_neighbors(g, &neig[i], i, IGRAPH_ALL);
+		
+	}
+	double val = 0;	
+	for (int v = 0; v < vertices; ++v){
+		val += Perm(g, &(neig[v]), vertex_community, v);
+	}
+	val /= vertices;
+	free(neig);
+
+	return val;
+}
 double igraph_community_MaxPerm(igraph_t * g, igraph_vector_t * membership, int maxIt)
 {
 	int i,j,u,v,vertices,Itern,count,prev;

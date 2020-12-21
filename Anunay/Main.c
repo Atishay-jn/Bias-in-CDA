@@ -26,7 +26,17 @@ void create_graph(igraph_t * g)
 	igraph_create(g, &v, 0, 0);
 	igraph_simplify(g, 1, 0, 0);
 }
-
+int* get_community(int v){
+	int* a;
+	a = (int* ) malloc(v*sizeof(int));
+	for (int i = 0; i < v; ++i)
+	{
+		int v1,v1_com;
+		scanf("%d %d",&v1,&v1_com);
+		a[v1] = v1_com;
+	}
+	return a;
+}
 void getMembershipFromFile(char filename[], igraph_vector_t * membership)
 {
 	char line[10000];
@@ -69,7 +79,8 @@ int main(int argc, char * argv[])
 	fprintf(out, "Our MaxPerm Implementation took %f seconds\n",((float)t)/CLOCKS_PER_SEC);
 	fprintf(out, "Network Permanence is %lf\n",Netw_perm );	
 
-	
+	int* comm = get_community(nVertices);
+	fprintf(out,"%lf\n",get_perm_val(&g,comm) );	
 	for(i=0;i<nVertices;++i)
 	{
 		fprintf(out, "%d\t%ld\n",i,(long)VECTOR(membership1)[i]);
