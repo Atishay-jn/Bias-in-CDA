@@ -42,8 +42,7 @@ double Perm(igraph_t * g, igraph_vector_t *neig_v, int * vertex_community, int v
 				numerator++;
 			}
 		}
-
-	}
+ }
 	D_v= i>0?i:1;
 	if(Emax_v==0)
 		Emax_v=1;
